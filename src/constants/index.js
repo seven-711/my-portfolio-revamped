@@ -91,18 +91,18 @@ export const myProjects = [
 
 export const mySocials = [
   {
-    name: "WhatsApp",
-    href: "",
-    icon: "/assets/socials/whatsApp.svg",
+    name: "Facebook",
+    href: "https://www.facebook.com/profile.php?id=61581118792267",
+    icon: "/assets/socials/facebook.svg",
   },
   {
-    name: "Linkedin",
-    href: "https://www.linkedin.com/in/ali-sanati/",
-    icon: "/assets/socials/linkedIn.svg",
+    name: "Gmail",
+    href: "https://mail.google.com/mail/?view=cm&fs=1&to=claridadjulyfranz@gmail.com",
+    icon: "/assets/socials/gmail.svg",
   },
   {
     name: "Instagram",
-    href: "https://www.instagram.com/ali.sanatidev/reels/",
+    href: "https://www.instagram.com/codex_machi1.0/",
     icon: "/assets/socials/instagram.svg",
   },
 ];

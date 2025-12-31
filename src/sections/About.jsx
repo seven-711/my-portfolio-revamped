@@ -41,7 +41,7 @@ const About = () => {
             />
             <Card
               style={{ rotate: "-30deg", top: "60%", left: "45%" }}
-              text="SOLID"
+              text="DETERMINED"
               containerRef={grid2Container}
             />
             <Card
@@ -51,12 +51,12 @@ const About = () => {
             />
             <Card
               style={{ rotate: "-45deg", top: "55%", left: "0%" }}
-              text="PRINCIPLES"
+              text="CURIOUS"
               containerRef={grid2Container}
             />
             <Card
               style={{ rotate: "20deg", top: "10%", left: "38%" }}
-              text="SRP"
+              text="PASSIONATE"
               containerRef={grid2Container}
             />
             <Card

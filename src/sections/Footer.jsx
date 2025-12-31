@@ -8,10 +8,10 @@ const Footer = () => {
         <p>|</p>
         <p>Privacy Policy</p>
       </div>
-      <div className="flex gap-3">
+      <div className="flex gap-3 text-white">
         {mySocials.map((social, index) => (
-          <a href={social.href} key={index}>
-            <img src={social.icon} className="w-5 h-5" alt={social.name} />
+          <a href={social.href} key={index} target="_blank" rel="noopener noreferrer">
+            <img src={social.icon} className="w-5 h-5 brightness-0 invert transition-colors hover:text-white" alt={social.name} />
           </a>
         ))}
       </div>
