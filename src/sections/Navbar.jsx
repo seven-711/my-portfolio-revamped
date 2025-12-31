@@ -5,8 +5,9 @@ import { useLenis } from 'lenis/react';
 const navLinks = [
   { id: 1, name: 'Home', href: '#home' },
   { id: 2, name: 'About', href: '#about' },
-  { id: 3, name: 'Work', href: '#work' },
-  { id: 4, name: 'Contact', href: '#contact' },
+  { id: 3, name: 'Projects', href: '#projects' },
+  { id: 4, name: 'Experience', href: '#work' },
+  { id: 5, name: 'Contact', href: '#contact' },
 ];
 
 function Navigation({ isScrolled }) {
@@ -60,7 +61,7 @@ const Navbar = () => {
   return (
     <div
       className={`fixed z-50 transition-[width,height,top,background-color] duration-500 ease-in-out ${isScrolled
-        ? `inset-x-0 top-4 mx-auto w-[90%] sm:w-[60%] lg:w-[40%] ${isOpen ? "rounded-2xl" : "rounded-full"
+        ? `inset-x-0 top-4 mx-auto w-[90%] sm:w-[70%] lg:w-[50%] ${isOpen ? "rounded-2xl" : "rounded-full"
         } bg-black/80 backdrop-blur-md shadow-2xl border border-white/10 py-2`
         : "inset-x-0 top-0 w-full bg-transparent"
         }`}

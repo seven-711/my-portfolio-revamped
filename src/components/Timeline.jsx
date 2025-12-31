@@ -1,11 +1,13 @@
-"use client";
-import { useScroll, useTransform, motion } from "framer-motion";
+import { useScroll, useTransform, motion } from "motion/react";
 import React, { useEffect, useRef, useState } from "react";
+import Stack from "./Stack";
 
 export const Timeline = ({ data }) => {
   const ref = useRef(null);
   const containerRef = useRef(null);
   const [height, setHeight] = useState(0);
+
+
 
   useEffect(() => {
     if (ref.current) {
@@ -24,7 +26,7 @@ export const Timeline = ({ data }) => {
 
   return (
     <div className="c-space section-spacing" ref={containerRef}>
-      <h2 className="text-heading">My Work Experience</h2>
+      <h2 className="text-heading">My Experience</h2>
       <div ref={ref} className="relative pb-20">
         {data.map((item, index) => (
           <div
@@ -55,6 +57,41 @@ export const Timeline = ({ data }) => {
             </div>
           </div>
         ))}
+
+        {/* Inline Stacks Section */}
+        <div className="flex flex-col gap-10 mt-20 md:flex-row md:justify-between md:mt-32">
+          {data.map((item, index) => (
+            <div key={index} className="flex flex-col items-center w-full md:w-1/3">
+              <div className="mb-4 text-center">
+                <h4 className="text-xl font-bold text-white">{item.title}</h4>
+                <p className="text-sm text-neutral-400">{item.job}</p>
+              </div>
+              <div className="relative w-full h-64 md:h-80">
+                <Stack
+                  cards={(item.images || []).map((img, i) => ({
+                    id: i + 1,
+                    content: (
+                      <div className="w-full h-full">
+                        <img
+                          src={img.img}
+                          className="object-cover w-full h-full rounded-2xl pointer-events-none"
+                          alt={`${item.title} - ${i + 1}`}
+                        />
+                      </div>
+                    )
+                  }))}
+                  randomRotation={true}
+                  sensitivity={100}
+                  sendToBackOnClick={true}
+                  autoplay={true}
+                  autoplayDelay={2500}
+                  animationConfig={{ stiffness: 200, damping: 15 }}
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+
         <div
           style={{
             height: height + "px",

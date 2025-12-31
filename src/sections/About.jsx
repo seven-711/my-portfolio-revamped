@@ -20,7 +20,7 @@ const About = () => {
             <p className="headtext">Hi, I'm July</p>
             <p className="subtext">
               Over the last 2 years, I developed my frontend and backend dev
-              skills to deliver dynamic and software and web applications.
+              skills to deliver dynamic software and web applications.
             </p>
           </div>
           <div className="absolute inset-x-0 pointer-evets-none -bottom-4 h-1/2 sm:h-1/3 bg-gradient-to-t from-indigo" />
@@ -36,7 +36,7 @@ const About = () => {
             </p>
             <Card
               style={{ rotate: "75deg", top: "30%", left: "20%" }}
-              text="GRASP"
+              text="ADAPTABLE"
               containerRef={grid2Container}
             />
             <Card
@@ -46,12 +46,12 @@ const About = () => {
             />
             <Card
               style={{ rotate: "90deg", bottom: "30%", left: "70%" }}
-              text="Design Patterns"
+              text="DESIGN"
               containerRef={grid2Container}
             />
             <Card
               style={{ rotate: "-45deg", top: "55%", left: "0%" }}
-              text="Design Principles"
+              text="PRINCIPLES"
               containerRef={grid2Container}
             />
             <Card
@@ -60,18 +60,23 @@ const About = () => {
               containerRef={grid2Container}
             />
             <Card
-              style={{ rotate: "30deg", top: "70%", left: "70%" }}
-              image="assets/logos/csharp-pink.png"
+              style={{ rotate: "30deg", top: "70%", left: "70%", borderRadius: "100%" }}
+              image="assets/logos/javascript.svg"
               containerRef={grid2Container}
             />
             <Card
               style={{ rotate: "-45deg", top: "70%", left: "25%" }}
-              image="assets/logos/dotnet-pink.png"
+              image="assets/logos/react.svg"
               containerRef={grid2Container}
             />
             <Card
               style={{ rotate: "-45deg", top: "5%", left: "10%" }}
-              image="assets/logos/blazor-pink.png"
+              image="assets/logos/tailwindcss.svg"
+              containerRef={grid2Container}
+            />
+            <Card
+              style={{ rotate: "-45deg", top: "5%", left: "10%", borderRadius: "100%" }}
+              image="assets/logos/git.svg"
               containerRef={grid2Container}
             />
           </div>
@@ -81,7 +86,7 @@ const About = () => {
           <div className="z-10 w-[50%]">
             <p className="headtext">Time Zone</p>
             <p className="subtext">
-              I'm based in Mars, and open to remote work worldwide
+              I'm based in the Philippines, and open to remote work worldwide.
             </p>
           </div>
           <figure className="absolute left-[30%] top-[10%]">
@@ -102,7 +107,7 @@ const About = () => {
           <div className="z-10 w-[50%]">
             <p className="headText">Teck Stack</p>
             <p className="subtext">
-              I specialize in a variety of languages, frameworks, and tools taht
+              I specialize in a variety of languages, frameworks, and tools that
               allow me to build robust and scalable applications
             </p>
           </div>
