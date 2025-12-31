@@ -9,57 +9,64 @@ const ParallaxBackground = () => {
   const mountain1Y = useTransform(x, [0, 0.5], ["0%", "0%"]);
 
   return (
-    <section className="absolute inset-0 bg-black/40">
+    <section className="absolute inset-0 -z-50">
       <div className="relative h-screen overflow-y-hidden">
-        {/* Background Sky */}
+        {/* Sky (Layer 1) */}
         <div
-          className="absolute inset-0 w-full h-screen -z-50"
+          className="absolute inset-0 w-full h-screen"
           style={{
-            backgroundImage: "url(/assets/sky.jpg)",
+            backgroundImage: "url('/assets/city 1/1.png')",
             backgroundPosition: "bottom",
             backgroundSize: "cover",
           }}
         />
-        {/* Mountain Layer 3 */}
+
+        {/* Far Buildings (Layer 2) */}
         <motion.div
-          className="absolute inset-0 -z-40"
+          className="absolute inset-0"
           style={{
-            backgroundImage: "url(/assets/mountain-3.png)",
+            backgroundImage: "url('/assets/city 1/2.png')",
             backgroundPosition: "bottom",
             backgroundSize: "cover",
             y: mountain3Y,
           }}
         />
-        {/* Planets */}
+
+        {/* Mid Buildings 1 (Layer 3) */}
         <motion.div
-          className="absolute inset-0 -z-30"
+          className="absolute inset-0"
           style={{
-            backgroundImage: "url(/assets/planets.png)",
-            backgroundPosition: "bottom",
-            backgroundSize: "cover",
-            x: planetsX,
-          }}
-        />
-        {/* Mountain Layer 2 */}
-        <motion.div
-          className="absolute inset-0 -z-20"
-          style={{
-            backgroundImage: "url(/assets/mountain-2.png)",
+            backgroundImage: "url('/assets/city 1/3.png')",
             backgroundPosition: "bottom",
             backgroundSize: "cover",
             y: mountain2Y,
           }}
         />
-        {/* Mountaine Layer 1 */}
+
+        {/* Mid Buildings 2 (Layer 4) */}
         <motion.div
-          className="absolute inset-0 -z-10"
+          className="absolute inset-0"
           style={{
-            backgroundImage: "url(/assets/mountain-1.png)",
+            backgroundImage: "url('/assets/city 1/4.png')",
+            backgroundPosition: "bottom",
+            backgroundSize: "cover",
+            y: mountain2Y,
+          }}
+        />
+
+        {/* Foreground (Layer 5) */}
+        <motion.div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: "url('/assets/city 1/5.png')",
             backgroundPosition: "bottom",
             backgroundSize: "cover",
             y: mountain1Y,
           }}
         />
+
+        {/* Transition Gradient */}
+        <div className="absolute bottom-0 w-full h-32 bg-gradient-to-t from-[#030412] to-transparent z-10 pointer-events-none" />
       </div>
     </section>
   );
