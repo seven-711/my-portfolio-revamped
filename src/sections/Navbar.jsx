@@ -24,7 +24,7 @@ function Navigation({ isScrolled }) {
   return (
     <ul className="nav-ul">
       {navLinks.map((item) => (
-        <li className={`nav-li relative ${isScrolled ? "text-neutral-400" : "text-black"}`} key={item.id}>
+        <li className={`nav-li relative ${isScrolled ? "text-neutral-400" : "text-neutral-200"}`} key={item.id}>
           <a
             href={item.href}
             className="nav-link relative px-2 py-1"
@@ -69,17 +69,17 @@ const Navbar = () => {
         <div className="flex items-center justify-between py-2 sm:py-0">
           <a
             href="/"
-            className={`text-xl font-bold transition-colors hover:text-white ${isScrolled ? "text-neutral-400" : "text-black"}`}
+            className={`text-xl font-bold transition-colors hover:text-white ${isScrolled ? "text-neutral-400" : "text-neutral-200"}`}
           >
             July
           </a>
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className={`flex cursor-pointer hover:text-white focus:outline-none sm:hidden ${isScrolled ? "text-neutral-400" : "text-black"}`}
+            className={`flex cursor-pointer hover:text-white focus:outline-none sm:hidden ${isScrolled ? "text-neutral-400" : "text-neutral-200"}`}
           >
             <img
               src={isOpen ? "assets/close.svg" : "assets/menu.svg"}
-              className={`w-6 h-6 ${isScrolled ? "" : "brightness-0"}`}
+              className={`w-6 h-6 ${isScrolled ? "" : ""}`}
               alt="toggle"
             />
           </button>

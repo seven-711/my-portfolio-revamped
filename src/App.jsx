@@ -12,7 +12,7 @@ import { ReactLenis } from 'lenis/react';
 const App = () => {
   return (
     <ReactLenis root>
-      <div className="container mx-auto max-w-7xl">
+      <div className="relative w-full overflow-hidden">
         <Navbar />
         <Hero />
         <About />
