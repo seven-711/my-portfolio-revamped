@@ -33,8 +33,8 @@ function Navigation({ isScrolled }) {
           >
             {isScrolled && active === item.name && (
               <motion.div
-                layoutId="active-nav"
-                className="absolute inset-0 bg-white/10 rounded-full -z-10"
+                layoutId="active-nav-indicator"
+                className="absolute left-1/2 -top-4 w-1.5 h-1.5 bg-white rounded-full shadow-[0_0_8px_2px_rgba(255,255,255,0.8)] -translate-x-1/2"
                 transition={{ type: "spring", stiffness: 380, damping: 30 }}
               />
             )}
